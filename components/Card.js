@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import Image from './Image'
 import Link from './Link'
 
@@ -5,7 +6,7 @@ const Card = ({ title, description, imgSrc, href }) => (
   <div className="md p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
     <div
       className={`${
-        imgSrc && 'h-full'
+        imgSrc && ''
       }  overflow-hidden rounded-md border-2 border-gray-200 border-opacity-60 dark:border-gray-700`}
     >
       {imgSrc &&

@@ -1,5 +1,30 @@
-/* eslint-disable react/jsx-no-duplicate-props */
-/* eslint-disable prettier/prettier */
+---
+title: UseState Hooks
+date: '2022-06-17'
+tags: ['react js', 'hooks']
+draft: false
+summary: 'Hooks är ett nytt tillägg i React 16.8. De låter dig använda state och andra React-funktioner utan att skriva en klass.'
+---
+
+### Introduktion till React 16.8.
+
+De låter dig använda state och andra React-funktioner utan att skriva en klass
+
+```javascript
+import React, { useState } from 'react'
+function Example() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0)
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  )
+}
+```
+
+```javascript
 import { useState } from 'react'
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css'
@@ -11,12 +36,6 @@ function Synaxarion() {
     )
   }
   const [date, setDate] = useState(new Date())
-
-  // State for date selected by user
-  const [selectedDate, setSelectedDate] = useState()
-
-  // State for text above calander
-  const [calendarText, setCalendarText] = useState(`No Date is selected`)
   return (
     <>
       <div>synaxarion</div>
@@ -26,12 +45,9 @@ function Synaxarion() {
           <Calendar
             onChange={setDate}
             value={date}
-            // onClickDay={sägHej}
-            // defaultView="month"
-            // nextLabel='Nästa'
-            // prevLabel='Föregående'
+            onClickDay={sägHej}
+
             // onClick={"hello", "world"} onChange
-            showWeekNumbers
           />
         </div>
         <p className="text-center">
@@ -43,3 +59,4 @@ function Synaxarion() {
 }
 
 export default Synaxarion
+```
