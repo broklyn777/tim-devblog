@@ -26,7 +26,8 @@ function Synaxarion() {
           <Calendar
             onChange={setDate}
             value={date}
-            // onClickDay={sägHej}
+            onClickDay={sägHej}
+            tileContent={calendarText}
             // defaultView="month"
             // nextLabel='Nästa'
             // prevLabel='Föregående'

@@ -6,6 +6,7 @@ const headerNavLinks = [
   { href: '/about', title: 'About' },
   // { href: '/ninjas/ninja', title: 'Ninja' },
   { href: '/big', title: 'Big' },
+  { href: '/bigcal', title: 'BigCal' },
 ]
 
 export default headerNavLinks

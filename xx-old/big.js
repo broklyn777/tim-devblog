@@ -5,16 +5,13 @@ import DatePicker, { CalendarContainer } from 'react-datepicker'
 
 import 'react-datepicker/dist/react-datepicker.css'
 
-// CSS Modules, react-datepicker-cssmodules.css
-// import 'react-datepicker/dist/react-datepicker-cssmodules.css';
-
 const Big = () => {
   const [startDate, setStartDate] = useState(new Date())
   const MyContainer = ({ className, children }) => {
     return (
-      <div className="bg-pink-100 p-2">
+      <div className="bg-teal-100 p-1">
         <CalendarContainer className={className}>
-          <div style={{ background: '#f0f0f0' }}>What is your favorite day?</div>
+          <div className="container"></div>
           <div style={{ position: 'relative' }}>{children}</div>
         </CalendarContainer>
       </div>
@@ -22,9 +19,16 @@ const Big = () => {
   }
   return (
     <DatePicker
+      dateFormat="yyyy/MM/dd"
       selected={startDate}
       onChange={(date) => setStartDate(date)}
       calendarContainer={MyContainer}
+      monthsShown={1} // add this prop
+      // isClearable
+      // placeholderText="I have been cleared!"
+      className="rounded-xl border-teal-700"
+      showWeekNumbers
+      locale={sv}
     />
   )
 }
